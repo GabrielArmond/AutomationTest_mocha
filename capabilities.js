@@ -3,7 +3,8 @@ var capabilities = {
   name: 'Selenium Test',
   platform: 'Windows 10',
   browserName: 'Chrome',
-  version: '95.0'
+  version: '95.0',
+  headless: true
 }
 
 module.exports = {
