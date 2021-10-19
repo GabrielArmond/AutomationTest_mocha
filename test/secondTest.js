@@ -1,5 +1,4 @@
 const { Builder, By, Key } = require('selenium-webdriver')
-var chrome = require('Selenium-webdriver/chrome')
 const { it } = require('mocha')
 var should = require('chai').should()
 
@@ -11,10 +10,7 @@ describe('add another a todo tests', function () {
   var driver
 
   beforeEach(() => {
-    driver = new Builder()
-      .forBrowser('chrome')
-      .setChromeOptions(new chrome.Options().addArguments('--headless'))
-      .build()
+    driver = new Builder().forBrowser('chrome').build()
   })
 
   afterEach(async () => {

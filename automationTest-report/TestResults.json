@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 3,
+    "suites": 3,
+    "tests": 5,
     "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-10-19T14:20:39.388Z",
-    "end": "2021-10-19T14:20:43.703Z",
-    "duration": 4315,
-    "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "failures": 3,
+    "start": "2021-10-19T16:00:36.013Z",
+    "end": "2021-10-19T16:00:39.287Z",
+    "duration": 3274,
+    "testsRegistered": 5,
+    "passPercent": 40,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e66a0d31-10c0-4bfc-8aaa-1a8d459dbec1",
+      "uuid": "dfffe496-fff3-4fad-a9b6-5cca7b3a99d0",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,73 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e2f1eff2-c058-4c2d-b9c2-652d5985d224",
+          "uuid": "fcbb49e9-c5bb-4203-be20-7f81b77f5320",
+          "title": "add another a todo tests",
+          "fullFile": "C:\\Users\\Farme\\Automation_test_headless_mocha\\test\\paramTest.js",
+          "file": "\\test\\paramTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successfully adds a todo for browser Chrome, 95.0, Windows 10",
+              "fullTitle": "add another a todo tests successfully adds a todo for browser Chrome, 95.0, Windows 10",
+              "timedOut": null,
+              "duration": 5,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "browsers.browser = browser\nbrowsers.bVersion = bVersion\nbrowsers.os = os\ndriver = new Builder().forBrowser('chrome').forBrowser('firefox').build()\n//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn Selenium')\nawait driver.quit()",
+              "err": {
+                "message": "Error: The geckodriver.exe executable could not be found on the current PATH. Please download the latest version from https://github.com/mozilla/geckodriver/releases/ and ensure it can be found on your PATH.",
+                "estack": "Error: The geckodriver.exe executable could not be found on the current PATH. Please download the latest version from https://github.com/mozilla/geckodriver/releases/ and ensure it can be found on your PATH.\n    at findGeckoDriver (node_modules\\selenium-webdriver\\firefox.js:458:11)\n    at new ServiceBuilder (node_modules\\selenium-webdriver\\firefox.js:551:22)\n    at Function.createSession (node_modules\\selenium-webdriver\\firefox.js:607:21)\n    at createDriver (node_modules\\selenium-webdriver\\index.js:148:33)\n    at Builder.build (node_modules\\selenium-webdriver\\index.js:721:16)\n    at Context.<anonymous> (test\\paramTest.js:25:73)",
+                "diff": null
+              },
+              "uuid": "c4e1ca35-dc03-4486-adb0-04cd406895be",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "successfully adds a todo for browser Firefox, 93.0, Windows 10",
+              "fullTitle": "add another a todo tests successfully adds a todo for browser Firefox, 93.0, Windows 10",
+              "timedOut": null,
+              "duration": 5,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "browsers.browser = browser\nbrowsers.bVersion = bVersion\nbrowsers.os = os\ndriver = new Builder().forBrowser('chrome').forBrowser('firefox').build()\n//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn Selenium')\nawait driver.quit()",
+              "err": {
+                "message": "Error: The geckodriver.exe executable could not be found on the current PATH. Please download the latest version from https://github.com/mozilla/geckodriver/releases/ and ensure it can be found on your PATH.",
+                "estack": "Error: The geckodriver.exe executable could not be found on the current PATH. Please download the latest version from https://github.com/mozilla/geckodriver/releases/ and ensure it can be found on your PATH.\n    at findGeckoDriver (node_modules\\selenium-webdriver\\firefox.js:458:11)\n    at new ServiceBuilder (node_modules\\selenium-webdriver\\firefox.js:551:22)\n    at Function.createSession (node_modules\\selenium-webdriver\\firefox.js:607:21)\n    at createDriver (node_modules\\selenium-webdriver\\index.js:148:33)\n    at Builder.build (node_modules\\selenium-webdriver\\index.js:721:16)\n    at Context.<anonymous> (test\\paramTest.js:25:73)",
+                "diff": null
+              },
+              "uuid": "7b345d2f-782c-4633-9cfb-1ca5c1e25193",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c4e1ca35-dc03-4486-adb0-04cd406895be",
+            "7b345d2f-782c-4633-9cfb-1ca5c1e25193"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "6d8e1f45-eb56-4544-9259-223994ea4aa4",
           "title": "add todo tests",
           "fullFile": "C:\\Users\\Farme\\Automation_test_headless_mocha\\test\\firstTest.js",
           "file": "\\test\\firstTest.js",
@@ -36,16 +102,16 @@
               "title": "\"before each\" hook in \"add todo tests\"",
               "fullTitle": "add todo tests \"before each\" hook in \"add todo tests\"",
               "timedOut": null,
-              "duration": 10,
+              "duration": 5,
               "state": null,
               "speed": null,
               "pass": false,
               "fail": false,
               "pending": null,
               "context": null,
-              "code": "driver = new Builder()\n  .forBrowser('chrome')\n  .setChromeOptions(new chrome.Options().addArguments('--headless'))\n  .build()",
+              "code": "driver = new Builder().forBrowser('chrome').build()",
               "err": {},
-              "uuid": "d0fe3d0a-b3f9-4a7b-9ae5-796545ee415c",
+              "uuid": "8f0ff02d-0382-418a-9c66-25a2e1181eda",
               "parentUUID": null,
               "isHook": true,
               "skipped": false
@@ -56,7 +122,7 @@
               "title": "\"after each\" hook in \"add todo tests\"",
               "fullTitle": "add todo tests \"after each\" hook in \"add todo tests\"",
               "timedOut": null,
-              "duration": 101,
+              "duration": 95,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,7 +131,7 @@
               "context": null,
               "code": "await driver.quit()",
               "err": {},
-              "uuid": "e4eba78b-2381-4045-9ce5-287b156c393f",
+              "uuid": "4376ad76-a9f7-451c-9a60-8b9d897c520c",
               "parentUUID": null,
               "isHook": true,
               "skipped": false
@@ -76,7 +142,7 @@
               "title": "successfully add todo to application",
               "fullTitle": "add todo tests successfully add todo to application",
               "timedOut": null,
-              "duration": 1937,
+              "duration": 1475,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -85,7 +151,7 @@
               "context": null,
               "code": "//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn Selenium')",
               "err": {},
-              "uuid": "85893280-783a-4c72-99b4-f4ecfae2828a",
+              "uuid": "c65ac286-0eb2-4d54-add0-b5ef2a588fdc",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -93,18 +159,18 @@
           ],
           "suites": [],
           "passes": [
-            "85893280-783a-4c72-99b4-f4ecfae2828a"
+            "c65ac286-0eb2-4d54-add0-b5ef2a588fdc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1937,
+          "duration": 1475,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "0f549732-dbd6-466d-8d5b-f7f6eb473b7a",
+          "uuid": "d3a97f1e-733d-482d-8338-945c59b0c03b",
           "title": "add another a todo tests",
           "fullFile": "C:\\Users\\Farme\\Automation_test_headless_mocha\\test\\secondTest.js",
           "file": "\\test\\secondTest.js",
@@ -120,9 +186,9 @@
               "fail": false,
               "pending": null,
               "context": null,
-              "code": "driver = new Builder()\n  .forBrowser('chrome')\n  .setChromeOptions(new chrome.Options().addArguments('--headless'))\n  .build()",
+              "code": "driver = new Builder().forBrowser('chrome').build()",
               "err": {},
-              "uuid": "f9f3ebc1-636d-4a93-a2b9-135ea1e7feaf",
+              "uuid": "3c71660b-71f1-44e6-a79d-d27c3e5cbf7c",
               "parentUUID": null,
               "isHook": true,
               "skipped": false
@@ -133,7 +199,7 @@
               "title": "\"after each\" hook in \"add another a todo tests\"",
               "fullTitle": "add another a todo tests \"after each\" hook in \"add another a todo tests\"",
               "timedOut": null,
-              "duration": 111,
+              "duration": 72,
               "state": null,
               "speed": null,
               "pass": false,
@@ -142,7 +208,7 @@
               "context": null,
               "code": "await driver.quit()",
               "err": {},
-              "uuid": "338d638a-4a91-49aa-a305-7adb9822c526",
+              "uuid": "ccfbd074-cbfe-4b5e-9582-95e4c0b8734f",
               "parentUUID": null,
               "isHook": true,
               "skipped": false
@@ -153,7 +219,7 @@
               "title": "successfully adds another todo to application",
               "fullTitle": "add another a todo tests successfully adds another todo to application",
               "timedOut": null,
-              "duration": 2034,
+              "duration": 1478,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -162,7 +228,7 @@
               "context": null,
               "code": "//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn Selenium')",
               "err": {},
-              "uuid": "12774805-742d-4118-9b12-f61c9b685f14",
+              "uuid": "d293b785-8135-4d87-bef0-c7cc59a8f006",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -171,7 +237,7 @@
               "title": "Adding a new test for reporting",
               "fullTitle": "add another a todo tests Adding a new test for reporting",
               "timedOut": null,
-              "duration": 1408,
+              "duration": 1184,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -181,10 +247,10 @@
               "code": "//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn nothing')",
               "err": {
                 "message": "AssertionError: expected 'Learn Selenium' to equal 'Learn nothing'",
-                "estack": "AssertionError: expected 'Learn Selenium' to equal 'Learn nothing'\n    at Context.<anonymous> (test\\secondTest.js:64:21)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "estack": "AssertionError: expected 'Learn Selenium' to equal 'Learn nothing'\n    at Context.<anonymous> (test\\secondTest.js:60:21)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
                 "diff": "- Learn Selenium\n+ Learn nothing\n"
               },
-              "uuid": "4a6a704e-08be-4c67-af46-04505df01d2b",
+              "uuid": "271024be-1c03-4231-acfa-572fb9569be1",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -192,14 +258,14 @@
           ],
           "suites": [],
           "passes": [
-            "12774805-742d-4118-9b12-f61c9b685f14"
+            "d293b785-8135-4d87-bef0-c7cc59a8f006"
           ],
           "failures": [
-            "4a6a704e-08be-4c67-af46-04505df01d2b"
+            "271024be-1c03-4231-acfa-572fb9569be1"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 3442,
+          "duration": 2662,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
