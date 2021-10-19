@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-10-19T14:20:39.388Z",
+    "end": "2021-10-19T14:20:43.703Z",
+    "duration": 4315,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e66a0d31-10c0-4bfc-8aaa-1a8d459dbec1",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e2f1eff2-c058-4c2d-b9c2-652d5985d224",
+          "title": "add todo tests",
+          "fullFile": "C:\\Users\\Farme\\Automation_test_headless_mocha\\test\\firstTest.js",
+          "file": "\\test\\firstTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"add todo tests\"",
+              "fullTitle": "add todo tests \"before each\" hook in \"add todo tests\"",
+              "timedOut": null,
+              "duration": 10,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = new Builder()\n  .forBrowser('chrome')\n  .setChromeOptions(new chrome.Options().addArguments('--headless'))\n  .build()",
+              "err": {},
+              "uuid": "d0fe3d0a-b3f9-4a7b-9ae5-796545ee415c",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"add todo tests\"",
+              "fullTitle": "add todo tests \"after each\" hook in \"add todo tests\"",
+              "timedOut": null,
+              "duration": 101,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit()",
+              "err": {},
+              "uuid": "e4eba78b-2381-4045-9ce5-287b156c393f",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "successfully add todo to application",
+              "fullTitle": "add todo tests successfully add todo to application",
+              "timedOut": null,
+              "duration": 1937,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn Selenium')",
+              "err": {},
+              "uuid": "85893280-783a-4c72-99b4-f4ecfae2828a",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "85893280-783a-4c72-99b4-f4ecfae2828a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1937,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "0f549732-dbd6-466d-8d5b-f7f6eb473b7a",
+          "title": "add another a todo tests",
+          "fullFile": "C:\\Users\\Farme\\Automation_test_headless_mocha\\test\\secondTest.js",
+          "file": "\\test\\secondTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"add another a todo tests\"",
+              "fullTitle": "add another a todo tests \"before each\" hook in \"add another a todo tests\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = new Builder()\n  .forBrowser('chrome')\n  .setChromeOptions(new chrome.Options().addArguments('--headless'))\n  .build()",
+              "err": {},
+              "uuid": "f9f3ebc1-636d-4a93-a2b9-135ea1e7feaf",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"add another a todo tests\"",
+              "fullTitle": "add another a todo tests \"after each\" hook in \"add another a todo tests\"",
+              "timedOut": null,
+              "duration": 111,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit()",
+              "err": {},
+              "uuid": "338d638a-4a91-49aa-a305-7adb9822c526",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "successfully adds another todo to application",
+              "fullTitle": "add another a todo tests successfully adds another todo to application",
+              "timedOut": null,
+              "duration": 2034,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn Selenium')",
+              "err": {},
+              "uuid": "12774805-742d-4118-9b12-f61c9b685f14",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adding a new test for reporting",
+              "fullTitle": "add another a todo tests Adding a new test for reporting",
+              "timedOut": null,
+              "duration": 1408,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//naviagete to our application\nawait driver.get('https://lambdatest.github.io/sample-todo-app/')\n//add a search\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN)\n//assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value\n  })\n//assert using chai should\ntodoText.should.equal('Learn nothing')",
+              "err": {
+                "message": "AssertionError: expected 'Learn Selenium' to equal 'Learn nothing'",
+                "estack": "AssertionError: expected 'Learn Selenium' to equal 'Learn nothing'\n    at Context.<anonymous> (test\\secondTest.js:64:21)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- Learn Selenium\n+ Learn nothing\n"
+              },
+              "uuid": "4a6a704e-08be-4c67-af46-04505df01d2b",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "12774805-742d-4118-9b12-f61c9b685f14"
+          ],
+          "failures": [
+            "4a6a704e-08be-4c67-af46-04505df01d2b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestResults",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "C:\\Users\\Farme\\Automation_test_headless_mocha\\automationTest-report",
+        "reportFilename": "TestResults"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

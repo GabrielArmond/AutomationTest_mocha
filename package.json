@@ -1,0 +1,20 @@
+{
+  "name": "automation_test_headless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --no-timeouts --parallel --reporter mochawesome --require mochawesome/register --reporter-options reportDir=C:\\Users\\Farme\\Automation_test_headless_mocha\\automationTest-report,reportFilename=TestResults"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "mochawesome": "^6.3.1",
+    "selenium-webdriver": "^4.0.0"
+  },
+  "devDependencies": {
+    "chromedriver": "^94.0.0"
+  }
+}
